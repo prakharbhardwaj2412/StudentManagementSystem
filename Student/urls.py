@@ -3,5 +3,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+
+	# student/password-update
+    path('password-update/', views.password_update, name='password-update'),
 ]

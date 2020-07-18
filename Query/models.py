@@ -7,6 +7,5 @@ class Query_table(models.Model):
 	STUDENT = models.ForeignKey(Student_table, on_delete=models.CASCADE)
 	QUERY_SUBJECT = models.CharField(max_length=500)
 	QUERY_TEXT = models.CharField(max_length=500)
-	DATE = models.CharField(max_length=50)
-	TIME = models.CharField(max_length=50)
-	STATUS = models.CharField(max_length=25)
+	DATE = models.DateField(max_length=50, auto_now=True)
+	STATUS = models.CharField(max_length=25, default="pending")

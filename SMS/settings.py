@@ -24,8 +24,10 @@ SECRET_KEY = 't!hg@by%9qbjlj6^ulu(!2l$l)xnlhqi3i56_bq_bd#j08!gmo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+CORS_ORIGIN_ALLOW_ALL = DEBUG
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['d191f9defd49.ngrok.io']
 
 
 # Application definition
@@ -40,13 +42,16 @@ INSTALLED_APPS = [
     'Teacher.apps.TeacherConfig',
     'Student.apps.StudentConfig',
     'Query.apps.QueryConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
