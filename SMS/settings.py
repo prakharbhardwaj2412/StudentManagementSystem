@@ -27,7 +27,7 @@ DEBUG = True
 CORS_ORIGIN_ALLOW_ALL = DEBUG
 
 
-ALLOWED_HOSTS = ['cc47d9e14e0b.ngrok.io']
+ALLOWED_HOSTS = ['63f0f860bac3.ngrok.io']
 
 
 # Application definition
