@@ -7,7 +7,7 @@ from .models import Student_table
 
 
 
-
+# password_updates() updates the password of student
 def password_update(request):
 	if (request.method=="POST"):
 		print(json.loads(request.body))
